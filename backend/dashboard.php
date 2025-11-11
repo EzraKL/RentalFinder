@@ -11,9 +11,7 @@ require_once 'db_connect.php';
 
 // MOCKED AUTH: Function to get the ID of the logged-in Poster
 function getPosterId() {
-    // !! IMPORTANT: In a real application, you MUST validate the user's token 
-    // and retrieve the user ID from your session or token payload.
-    // For now, we assume a valid logged-in Poster ID:
+  
     return 1; 
 }
 
