@@ -1,0 +1,228 @@
+/* frontend/src/App.css */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: sans-serif;
+}
+header { text-align: center; margin-bottom: 30px; }
+hr { margin: 40px 0; border: 0; border-top: 1px solid #eee; }
+
+/* Listings Grid */
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.listing-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.listing-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.price { font-weight: bold; color: #007bff; font-size: 1.2em; }
+
+/* Form Styling */
+.listing-form {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+.listing-form h2 { grid-column: 1 / -1; margin-top: 0; }
+.listing-form textarea, .listing-form button { grid-column: 1 / -1; }
+.listing-form input, .listing-form select, .listing-form textarea {
+  padding: 10px; border: 1px solid #ccc; border-radius: 4px; width: 100%; box-sizing: border-box;
+}
+.listing-form button {
+  padding: 10px 15px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer;
+}
+.status { padding: 10px; border-radius: 4px; text-align: center; grid-column: 1 / -1; }
+.status.success { background-color: #d4edda; color: #155724; }
+.status.error { background-color: #f8d7da; color: #721c24; }
+
+/* frontend/src/App.css - New additions */
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.edit-button, .delete-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  flex: 1;
+  margin: 0 5px;
+}
+
+.edit-button {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Modal Styling */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.edit-form {
+  background: white;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: block; /* Override grid for cleaner modal layout */
+}
+
+.edit-form input, .edit-form select, .edit-form textarea {
+  margin-bottom: 10px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.cancel-button {
+  background-color: #6c757d !important; 
+  color: white !important;
+}
+
+/* Inquiry Button Style */
+.inquiry-button {
+  padding: 8px 12px;
+  background-color: #17a2b8; /* Info blue color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  flex-grow: 1; /* Make it fill the space if alone */
+  margin: 0 5px;
+}
+
+/* Inquiry Form Modal (Reuse and expand existing modal styles) */
+.inquiry-form {
+  background: white;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px; /* Slightly smaller modal */
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.inquiry-form textarea {
+  min-height: 120px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.inquiry-form .button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.inquiry-card {
+  border: 1px solid #dee2e6;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.inquiry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.inquiry-status {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+/* Status Colors */
+.status-new {
+  background-color: #ffc107; /* Yellow */
+  color: #333;
+}
+.status-contacted {
+  background-color: #17a2b8; /* Blue/Cyan */
+  color: white;
+}
+.status-resolved {
+  background-color: #28a745; /* Green */
+  color: white;
+}
+
+.contact-details p {
+  margin: 5px 0;
+  font-size: 0.9em;
+}
+
+.inquiry-actions {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+.inquiry-actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+}
+.inquiry-actions button:last-child {
+  background-color: #6c757d; /* Gray for resolved */
+}
+.inquiry-actions button:disabled {
+  background-color: #ced4da;
+  cursor: not-allowed;
+}
