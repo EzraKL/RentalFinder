@@ -10,17 +10,13 @@ require_once 'db_connect.php';
 $method = $_SERVER['REQUEST_METHOD'];
 $data = json_decode(file_get_contents('php://input'), true);
 
-// ===============================================
-// AUTHENTICATION HELPER FUNCTION (MOCKED)
-// !! SECURITY WARNING: MUST be replaced with actual token validation in production.
+
 // This function simulates getting the user ID from a token sent by React.
 function getUserIdFromToken() {
-    // For now, we assume a valid logged-in poster user (ID 1) for testing ownership.
-    // In a real app, you would validate the token from $_SERVER['HTTP_AUTHORIZATION']
-    // and query the database for the user ID.
+  
     return 1; 
 }
-// ===============================================
+
 
 switch ($method) {
     case 'GET':
