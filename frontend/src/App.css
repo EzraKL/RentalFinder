@@ -50,7 +50,7 @@ hr { margin: 40px 0; border: 0; border-top: 1px solid #eee; }
 .status.success { background-color: #d4edda; color: #155724; }
 .status.error { background-color: #f8d7da; color: #721c24; }
 
-/* frontend/src/App.css - New additions */
+/* frontend/src/App.css  */
 
 .card-actions {
   display: flex;
@@ -130,7 +130,7 @@ hr { margin: 40px 0; border: 0; border-top: 1px solid #eee; }
   margin: 0 5px;
 }
 
-/* Inquiry Form Modal (Reuse and expand existing modal styles) */
+/* Inquiry Form Modal  */
 .inquiry-form {
   background: white;
   padding: 30px;
