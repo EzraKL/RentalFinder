@@ -135,11 +135,6 @@ const App = () => {
             
             <hr style={{ margin: '20px 0' }} />
 
-
-            {/* ======================================================= */}
-            {/* FINAL LOGIC: CONDITIONAL RENDERING BY ROLE */}
-            {/* ======================================================= */}
-            
             {isPoster ? (
                 // --- POSTER DASHBOARD VIEW ---
                 <>
